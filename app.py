@@ -169,7 +169,7 @@ class OpenRouterLLM(LLM):
 
 # Initialize embeddings and LLM
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-api_key = "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"
+api_key = "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"
 llm = OpenRouterLLM(api_key=api_key)
 
 # Load the pre-built database

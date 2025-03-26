@@ -151,7 +151,7 @@ class OpenRouterLLM(LLM):
 
 # Initialize embeddings and LLM
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-api_key = "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"
+api_key = "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"
 llm = OpenRouterLLM(api_key=api_key)
 
 # Load the Pinecone vector store
