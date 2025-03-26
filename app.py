@@ -113,13 +113,6 @@ bc_policy_urls = [
     "https://www2.gov.bc.ca/assets/gov/education/post-secondary-education/institution-resources-administration/accountability-framework/iapr/vcc_iapr.pdf",
     "https://www2.gov.bc.ca/assets/gov/education/post-secondary-education/institution-resources-administration/accountability-framework/iapr/viu_iapr.pdf"
 
-
-
-
-
-
-
-    # Note: "https://langara.ca/registration-and-records" is not a PDF, remove or replace with a valid PDF URL
 ]
 
 # Process all documents (run this section once to build the database)
@@ -134,7 +127,7 @@ if not st.session_state.get("database_built", False):
             chunks = text_splitter.split_text(text)
             chunks_with_meta = [f"Source: {url.split('/')[-1]}\n\n{chunk}" for chunk in chunks]
             all_chunks.extend(chunks_with_meta)
-            print(f"Processed {url}: {len(chunks)} chunks")
+            # print(f"Processed {url}: {len(chunks)} chunks")
 
     vector_store = FAISS.from_texts(all_chunks, embeddings)
     vector_store.save_local("bc_policy_db")
