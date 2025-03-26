@@ -1,7 +1,7 @@
 langchain==0.3.21
 langchain_community==0.3.20
 langchain_pinecone==0.2.3
-pinecone==6.0.2
+pinecone==5.4.0
 PyPDF2==3.0.1
 Requests==2.32.3
 streamlit==1.37.1
